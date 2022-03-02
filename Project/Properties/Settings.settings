@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Opening_Tools.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Updater_On" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FolderPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">АР</Value>
+    </Setting>
+    <Setting Name="KR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">КР</Value>
+    </Setting>
+    <Setting Name="OV" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ОВ</Value>
+    </Setting>
+    <Setting Name="VK" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ВК</Value>
+    </Setting>
+    <Setting Name="EOM" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ЭОМ</Value>
+    </Setting>
+    <Setting Name="SS" Type="System.String" Scope="User">
+      <Value Profile="(Default)">СС</Value>
+    </Setting>
+    <Setting Name="OpnFamilyName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ATL_Отверстие в стене</Value>
+    </Setting>
+    <Setting Name="DelFamilyName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ATL_Отверстие_Удалено</Value>
+    </Setting>
+    <Setting Name="Prefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WallOpns</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

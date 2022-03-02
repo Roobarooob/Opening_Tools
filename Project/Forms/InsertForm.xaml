@@ -1,0 +1,16 @@
+﻿<Window x:Class="Opening_Tools.InsertForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Opening_Tools"
+             mc:Ignorable="d" Width="304" Height="140">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="LinkBox" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="276"/>
+        <Button x:Name="RunButton" Content="Запуск" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="276" Height="30" Click="RunInsertion" Background="#FFC85A5A" Foreground="White"/>
+        <Label Content="Выберите связанный файл с отверстиями" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="276"/>
+    </Grid>
+</Window>

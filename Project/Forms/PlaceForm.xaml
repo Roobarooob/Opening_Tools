@@ -1,0 +1,169 @@
+﻿<Window x:Name="root" x:Class="Opening_Tools.PlaceForm"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:local="clr-namespace:Opening_Tools"
+            mc:Ignorable="d" 
+            d:DesignHeight="300" Background="Gray" Width ="910" ResizeMode="NoResize" Height="405"
+            MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="300"/>
+            <ColumnDefinition Width="Auto" MinWidth="300"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="Walls" HorizontalAlignment="Stretch" Margin="10,0,0,10" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="2">
+            <ListBox.Resources>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                <Border x:Name="Bd"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}"
+                            Padding="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="true">
+                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="Selector.IsSelectionActive"
+                                            Value="False" />
+                                            <Condition Property="IsSelected"
+                                            Value="True" />
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="DarkOrange" />
+                                    </MultiTrigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="Selector.IsSelectionActive"
+                                            Value="True" />
+                                            <Condition Property="IsSelected"
+                                            Value="True" />
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="DarkOrange" />
+                                    </MultiTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.Resources>
+        </ListBox>
+        <ListBox x:Name="Comms" HorizontalAlignment="Stretch" Margin="0,0,0,10" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="2" >
+            <ListBox.Resources>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                <Border x:Name="Bd"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}"
+                            Padding="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="true">
+                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="Selector.IsSelectionActive"
+                                            Value="False" />
+                                            <Condition Property="IsSelected"
+                                            Value="True" />
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="DarkOrange" />
+                                    </MultiTrigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="Selector.IsSelectionActive"
+                                            Value="True" />
+                                            <Condition Property="IsSelected"
+                                            Value="True" />
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="DarkOrange" />
+                                    </MultiTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.Resources>
+        </ListBox>
+        <ListBox x:Name="Level" HorizontalAlignment="Stretch" Margin="0,0,4,10" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2">
+            <ListBox.Resources>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                <Border x:Name="Bd"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}"
+                            Padding="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="true">
+                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="Selector.IsSelectionActive"
+                                            Value="False" />
+                                            <Condition Property="IsSelected"
+                                            Value="True" />
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="DarkOrange" />
+                                    </MultiTrigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="Selector.IsSelectionActive"
+                                            Value="True" />
+                                            <Condition Property="IsSelected"
+                                            Value="True" />
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background"
+                                    TargetName="Bd"
+                                    Value="DarkOrange" />
+                                    </MultiTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.Resources>
+        </ListBox>
+        <Label Content="Стены" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Background="#FFE4E4E4" Margin="10,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="0" Grid.Row="1" BorderThickness="1"/>
+        <Label Content="Сети" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Background="#FFE4E4E4" Margin="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Grid.Row="1" BorderThickness="1"/>
+        <Label Content="Уровни" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Background="#FFE4E4E4" Margin="0,0,4,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="1"/>
+
+        <Button Content="Запуск" Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="128" Height="30" Click="Run_Placing" Background="#FFC85A5A" Foreground="White"/>
+        <Button Content="Отмена" Grid.Column="3" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="128" Height="30" Click="Close"/>
+        <Label Content="Выберите элементы в каждой колонке и нажмите запуск" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Background="#00E4E4E4" Margin="10,10,0,10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="0" BorderThickness="1" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

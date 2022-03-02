@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Координация отверстий</Name>
+    <Assembly>ATLANT/Opening_Tolls.dll</Assembly>
+    <FullClassName>Opening_Tolls.App</FullClassName>
+    <ClientId>0bf928c4-7580-4334-8203-e94cc4860487</ClientId>
+		<VendorId>Anton Rubinshtein</VendorId>
+    <VendorDescription>Atlant</VendorDescription>
+  </AddIn>
+</RevitAddIns>

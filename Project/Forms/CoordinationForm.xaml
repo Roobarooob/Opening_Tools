@@ -1,0 +1,27 @@
+﻿<Window x:Name="Root" x:Class="Opening_Tools.CoordinationForm" Topmost="True" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Opening_Tools"
+             mc:Ignorable="d" Width="480" Height="250" HorizontalAlignment="Center" MinWidth="450" Title="Координация отверстий" ResizeMode="NoResize" WindowStyle="ToolWindow" VerticalAlignment="Center" Background="Gray">
+
+    <Grid Margin="5" Height="Auto" VerticalAlignment="Stretch" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350*"/>
+            <ColumnDefinition Width="109*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Folderbutton" Content="Путь к папке с csv..." MinWidth="50" MinHeight="30" Click="GetFolderPath"  HorizontalAlignment="Stretch" Margin="5" VerticalAlignment="Stretch"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <Button x:Name="Exportbutton" Content="Экспорт файла &#xD;&#xA;отверстий"  MinWidth="50" MinHeight="30" Click="Export"  HorizontalAlignment="Stretch" Margin="5" VerticalAlignment="Stretch"  Grid.Column="1" Grid.Row="1"/>
+
+        <Button Content="Запуск"  MinWidth="50" MinHeight="30" Click="Compare"  HorizontalAlignment="Stretch" Margin="5" VerticalAlignment="Stretch"  Grid.Column="1" Grid.Row="2" Background="#FFC85A5A" Foreground="White"/>
+        <Button Content="Закрыть" MinWidth="50" MinHeight="30" Click="Ok"  HorizontalAlignment="Stretch" Margin="5" VerticalAlignment="Stretch"  Grid.Column="1" Grid.Row="3"/>
+        <ListBox x:Name="Files" HorizontalAlignment="Left" Height="143" Margin="5,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="349" Grid.RowSpan="3" MouseDoubleClick="FileOpen"/>
+    </Grid>
+</Window>
